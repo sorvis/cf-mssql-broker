@@ -73,9 +73,9 @@ Setup you GOPATH env variable
 
 ```sh
 go get -u -v github.com/tools/godep
-go get github.com/cloudfoundry-incubator/cf-mssql-broker
+go get github.com/svrc-pivotal/cf-mssql-broker
 
-cd $GOPATH/src/github.com/cloudfoundry-incubator/cf-mssql-broker # cd $env:GOPATH/src/github.com/cloudfoundry-incubator/cf-mssql-broker
+cd $GOPATH/src/github.com/svrc-pivotal/cf-mssql-broker # cd $env:GOPATH/src/github.com/svrc-pivotal/cf-mssql-broker
 
 godep restore
 go build
@@ -87,10 +87,10 @@ cf-mssql-broker -config=cf_mssql_broker_config.json
 ### Update dependencies
 
 ```sh
-cd $GOPATH/src/github.com/cloudfoundry-incubator/cf-mssql-broker
+cd $GOPATH/src/github.com/svrc-pivotal/cf-mssql-broker
 
 # To update all packages:
-go get -u -v go get github.com/cloudfoundry-incubator/cf-mssql-broker/...
+go get -u -v go get github.com/svrc-pivotal/cf-mssql-broker/...
 godep update ...
 
 # Or to update a specific package (e.g. odbc package):
@@ -166,7 +166,7 @@ Also, make sure the the CF applications that bind and connect to the SQL service
 
 ## Binding credentials exmaple
 
-VCAP_SERVICES env variable for a CF application with a mssql service binding will contin the crednetials to the SQL Server. The folowing [credential fields](https://github.com/cloudfoundry-incubator/cf-mssql-broker/blob/master/mssql_binding_credentials.go) will be used:
+VCAP_SERVICES env variable for a CF application with a mssql service binding will contin the crednetials to the SQL Server. The folowing [credential fields](https://github.com/svrc-pivotal/cf-mssql-broker/blob/master/mssql_binding_credentials.go) will be used:
  * "host" - IP address or host of the SQL Server
  * "port" - The listening TCP port number
  * "name" - Database name
